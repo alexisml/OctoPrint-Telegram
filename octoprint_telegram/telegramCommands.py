@@ -353,9 +353,9 @@ class TCMD():
 	def cmdUser(self,chat_id,from_id,cmd,parameter):
 		msg = self.gEmo('info') + " *Your user settings:*\n\n"
 		msg += "*ID:* " + str(chat_id) + "\n"
-		msg += "*Name:* " + str(self.main.chats[chat_id]['title']) + "\n"
+		msg += "*Name:* " + self.main.chats[chat_id]['title'] + "\n"
 		if self.main.chats[chat_id]['private']:
-			msg += "*Type:* Priavte\n\n"
+			msg += "*Type:* Private\n\n"
 		else:
 			msg += "*Type:* Group\n"
 			if self.main.chats[chat_id]['accept_commands']:
@@ -545,7 +545,7 @@ class TCMD():
 		                           "/togglepause - Pause/Resume current Print.\n"
 		                           "/con - Connect/disconnect printer.\n"
 		                           "/upload - You can just send me a gcode file to save it to my library.\n"
-		                           "/sys - Execute Octoprint System Comamnds.\n"
+		                           "/sys - Execute Octoprint System Commands.\n"
 		                           "/ctrl - Use self defined controls from Octoprint.\n"
 		                           "/tune - Set feed- and flowrate. Control temperatures.\n"
 		                           "/user - get user info.\n"
